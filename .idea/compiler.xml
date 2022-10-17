@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nifi-quapi-nifi-processor-processors" />
-        <module name="nifi-quapi-nifi-processor-nar" />
+        <module name="nifi-quapi-nar" />
+        <module name="nifi-quapi-processors" />
       </profile>
     </annotationProcessing>
   </component>

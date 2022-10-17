@@ -18,14 +18,25 @@
 
     <parent>
         <groupId>org.yottalabs</groupId>
-        <artifactId>quapi-nifi-processor</artifactId>
+        <artifactId>nifi-quapi-processors</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>nifi-quapi-nifi-processor-processors</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>nifi-quapi-nar</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>nar</packaging>
+    <properties>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <source.skip>true</source.skip>
+    </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.yottalabs</groupId>
+            <artifactId>nifi-quapi-processors</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.nifi</groupId>
             <artifactId>nifi-api</artifactId>
@@ -41,21 +52,6 @@
             <version>1.18.0</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.nifi</groupId>
@@ -65,4 +61,5 @@
         </dependency>
 
     </dependencies>
+
 </project>
